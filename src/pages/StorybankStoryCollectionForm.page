@@ -1,0 +1,68 @@
+<apex:page title="Tell Us Your Story" sidebar="false" cache="false" showheader="false" showChat="false" standardstylesheets="true" controller="StoryCollectionController" docType="html-5.0">
+
+    <apex:pageBlock title="Tell Us Your Story">
+    
+        <apex:pageBlockSection >
+
+            <p>One of the best ways for you to make an impact on the issues you care about is to share your story and talk about how you and your family are impacted by an issue or policy. Make your voice heard and take a few minutes to share your story here.</p>
+
+        </apex:pageBlockSection>
+        
+        <apex:form >
+        
+        <apex:pageBlockSection columns="1" title="Storyteller Information" collapsible="false">
+    
+            <apex:inputField id="firstName" type="text" required="true" value="{!story.First_Name__c}"/>
+            
+            <apex:inputField id="lastName" type="text" required="true" value="{!story.Last_Name__c}"/>
+            
+            <apex:inputField id="emailAddress" type="email" required="true" value="{!story.Email_Address__c}"/>
+            
+            <apex:inputField id="phoneNumber" type="tel" value="{!story.Phone__c}"/>
+                        
+            <apex:inputField id="gender" type="auto" required="false" value="{!story.Gender__c}"/>
+            
+            <apex:inputField id="ageRange" type="auto" required="false" value="{!story.Age_range__c}"/>
+            
+            <apex:inputField id="ethnicity" type="auto" required="false" value="{!story.Ethnicity__c}"/>
+                
+        </apex:pageblocksection>
+        
+        <apex:pageBlockSection columns="1" title="Nominator Information (if applicable)" collapsible="false">
+    
+            <apex:inputField id="nomFirstName" type="text" value="{!story.Nominator_First__c}"/>
+            
+            <apex:inputField id="nomLastName" type="text" value="{!story.Nominator_Last_Name__c}"/>
+            
+            <apex:inputField id="nomEmailAddress" type="email" value="{!story.Nominator_Email_Address__c}"/>
+            
+            <apex:inputField id="nomOrganization" type="text" value="{!story.Nominator_Organization__c}"/>
+                        
+        </apex:pageblocksection>
+        
+        <apex:pageBlockSection columns="1" title="Story Information" collapsible="false">
+                        
+            <apex:outputLabel rendered="true">Do you have your story already documented and recorded? If so please share the link below:</apex:outputLabel>
+            <apex:inputField id="storyURL" type="url" value="{!story.Video_URL__c}" label="Youtube/Vimeo Link"/>
+            
+            <apex:outputLabel rendered="true">Or share you story in writing below:</apex:outputLabel>
+            <apex:inputtextarea rows="10" cols="100" id="story" value="{!story.Submitted_Story__c}"/>
+            
+            <apex:inputField id="category" type="auto" value="{!story.Category__c}"/>
+            
+        </apex:pageblocksection>
+        
+        <apex:pageBlockSection columns="1" title="Story Usage" collapsible="false">
+            
+            <apex:outputLabel rendered="true">Do you agree to let us use your story and publish it? Don't worry we'll keep you in the loop the whole time.</apex:outputLabel>
+            <apex:inputCheckbox id="agree" value="{!story.Agree_to_Terms_of_Use__c}" label="I agree"/>
+
+        </apex:pageblocksection>
+        
+        <apex:commandButton value="Submit" action="{!submit}"/>
+        
+    </apex:form>
+    
+    </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ContactSearch</members>
+        <members>ManageStorybankSubmissions</members>
+        <members>PublicStorybankSubmissionController</members>
+        <members>StoryCollectionController</members>
+        <members>StorybankContactUpdates</members>
+        <members>StorybankInstallationScripts</members>
+        <members>StorybankPostInstallClass</members>
+        <members>StorybankSubmissionConversionController</members>
+        <members>StorybankUtilities</members>
+        <members>Storybank_Queries</members>
+        <members>TEST_DATA_Factory</members>
+        <members>TEST_StoryBankConversion</members>
+        <members>TEST_StorybankContactUpdates</members>
+        <members>TEST_Storybank_Creation</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ApprovedStorybankInlineYouTube</members>
+        <members>StorybankInlineYouTube</members>
+        <members>StorybankPublicPageTemplate</members>
+        <members>StorybankSearch</members>
+        <members>StorybankStoryCollectionForm</members>
+        <members>StorybankSubmissionConfirmation</members>
+        <members>StorybankSubmissionConversionNomOrg</members>
+        <members>StorybankSubmissionConversionNominator</members>
+        <members>StorybankSubmissionConversionStory</members>
+        <members>StorybankSubmissionConversionStoryteller</members>
+        <members>StorybankSubmissionUpdateNominator</members>
+        <members>StorybankSubmissionUpdateStoryteller</members>
+        <members>StorytellerFormSimple</members>
+        <members>Storyteller_Form</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Storybank_Package</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Contact</members>
+        <members>StorybankFieldsNominator__c</members>
+        <members>StorybankFieldsStoryteller__c</members>
+        <members>Storybank_Approved__c</members>
+        <members>Storybank_Fields_Nominator_Org__c</members>
+        <members>Storybank_Map_Submitted_Approved__c</members>
+        <members>Storybank_Settings__c</members>
+        <members>Storybank_Submitted__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Storybank_Approved__c</members>
+        <members>Storybank_Submitted__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Storybank_Approved__c-Text Submission</members>
+        <members>Storybank_Approved__c-Video Submission</members>
+        <members>Storybank_Submitted__c-Text Converted</members>
+        <members>Storybank_Submitted__c-Text Submission</members>
+        <members>Storybank_Submitted__c-Video Converted</members>
+        <members>Storybank_Submitted__c-Video Submission</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Storybank_Reports</members>
+        <members>Storybank_Reports/Approved_Stories_Based_in_the_DMV_Area</members>
+        <members>Storybank_Reports/Approved_Stories_General_Report</members>
+        <members>Storybank_Reports/Approved_Stories_Health_Nutrition2</members>
+        <members>Storybank_Reports/Approved_Stories_Videos_Included</members>
+        <members>Storybank_Reports/Converted_Stories</members>
+        <members>Storybank_Reports/General_Submitted_Stories_Report</members>
+        <members>Storybank_Reports/Nominated_Storytellers</members>
+        <members>Storybank_Reports/Submitted_Stories_Videos_Included</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>public_stories_css</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Storybank_Approved__c</members>
+        <members>Storybank_Submitted__c</members>
+        <name>Workflow</name>
+    </types>
+    <version>29.0</version>
+</Package>

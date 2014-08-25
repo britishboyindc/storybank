@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fieldSets>
+        <fullName>Conversion</fullName>
+        <description>Deprecated</description>
+        <label>DEP - Conversion</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Public_Pages</fullName>
+        <description>Fields to appear on Public Facing pages (Maps, Searches)</description>
+        <displayedFields>
+            <field>Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Final_Copy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Story_Summary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Storyteller__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Video_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Public Pages</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Story_Public_Detail_Page</fullName>
+        <description>Fields to show for an individual story - for performance reasons, we don&apos;t want to include big text in the summary choices, but this set will only return one record</description>
+        <displayedFields>
+            <field>Submitter__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Story_Summary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Storybank_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Final_Copy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Video__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Video_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Story Public Detail Page</label>
+    </fieldSets>
+    <fields>
+        <fullName>Age_Range_formula__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT( Storyteller__r.Age_Range__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age Range</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agree_to_Terms_of_Use__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Agree to Terms of Use</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribution__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>How submitter wants to be known...</inlineHelpText>
+        <label>Pseudonym</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Category Chosen by Submitter</inlineHelpText>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Child Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing and Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jobs/Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nutrition Assistance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tax Credits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other (Please Specify)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_s_City__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.MailingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact&apos;s City</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_s_State__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.MailingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact&apos;s State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_s_Street__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.MailingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact&apos;s Street</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_s_Zip__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.MailingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact&apos;s Zip</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Embed_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Embed URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Final_Copy__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Final Copy</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>How_did_you_hear_about_us__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>How did you hear about us?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facebook/Twitter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Internet Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Categories__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Internal Categories</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cutting Poverty in Half</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Creating Good Jobs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Strengthening Families</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promoting Economic Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Nominating_Organization__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Nominating Organization</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Storybank - Approved</relationshipLabel>
+        <relationshipName>Storybank_Approved</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Nominator_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Nominator Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Other Category</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Posted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Posted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Story_Summary__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Summarize story, especially for video</inlineHelpText>
+        <label>Story Summary</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Storybank_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Storybank Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Disability__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storyteller&apos;s Disability status based on the Storyteller Contact Lookup field</description>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.Disability__c</formula>
+        <label>Storyteller Disability</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Storyteller Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Ethnicity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storyteller&apos;s Ethnicity based on the Storyteller Contact Lookup field</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Storyteller__r.Ethnicity__c )</formula>
+        <label>Storyteller Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Gender__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storyteller&apos;s Gender based on the Storyteller Contact Lookup field</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Storyteller__r.Gender__c )</formula>
+        <label>Storyteller Gender</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Storyteller Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.Phone</formula>
+        <label>Storyteller Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Sexual_Orientation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storyteller&apos;s Secual Orientation based on the Storyteller Contact Lookup field</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Storyteller__r.Sexual_Orientation__c )</formula>
+        <label>Storyteller Sexual Orientation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storyteller_Veteran__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storyteller&apos;s Veteran status based on the Storyteller Contact Lookup field</description>
+        <externalId>false</externalId>
+        <formula>Storyteller__r.Veteran__c</formula>
+        <label>Storyteller Veteran</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Storyteller__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Storyteller</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Storybank - Approved (Storyteller)</relationshipLabel>
+        <relationshipName>Storyteller</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Submitted Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_Story__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Story submitted from web</inlineHelpText>
+        <label>Submitted Story</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Submitter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Nominator</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Storybank - Approved (Nominator)</relationshipLabel>
+        <relationshipName>Nominator</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Team__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storybank Team&apos;s name to track source of the story. The value should originally be set by a workflow when the public form is submitted. It is copied to the Storybank record via the Field Set.</description>
+        <externalId>false</externalId>
+        <label>Team</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Video_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>URL of Video being submitted</inlineHelpText>
+        <label>Video URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Video__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Video</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Storybank - Approved</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Posted__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Posted_Stories</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Not Posted Stories</label>
+    </listViews>
+    <listViews>
+        <fullName>Posted_Stories_12_Months</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>lessThan</operation>
+            <value>LAST_N_MONTHS:12</value>
+        </filters>
+        <label>Posted Stories - 12 Months</label>
+    </listViews>
+    <listViews>
+        <fullName>Posted_Stories_6_Months</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>lessThan</operation>
+            <value>LAST_N_MONTHS:6</value>
+        </filters>
+        <label>Posted Stories - 6 Months</label>
+    </listViews>
+    <listViews>
+        <fullName>Posted_Stories_All_Time</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Posted Stories - All Time</label>
+    </listViews>
+    <listViews>
+        <fullName>Posted_Stories_Text</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Storybank_Approved__c.Text_Submission</value>
+        </filters>
+        <label>Posted Stories - Text</label>
+    </listViews>
+    <listViews>
+        <fullName>Posted_Stories_Video</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Posted__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Storybank_Approved__c.Video_Submission</value>
+        </filters>
+        <label>Posted Stories - Video</label>
+    </listViews>
+    <listViews>
+        <fullName>Stories_w_Nominators</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Submitter__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Stories w/ Nominators</label>
+    </listViews>
+    <listViews>
+        <fullName>Stories_w_o_Nominators</fullName>
+        <columns>NAME</columns>
+        <columns>Storybank_Name__c</columns>
+        <columns>Storyteller__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Category__c</columns>
+        <columns>Video_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Submitter__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Stories w/o Nominators</label>
+    </listViews>
+    <nameField>
+        <label>Approved Submission Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Storybank - Approved</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Text_Submission</fullName>
+        <active>true</active>
+        <description>For stories submitted as Text</description>
+        <label>Text Submission</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Child Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing and Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jobs%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nutrition Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28Please Specify%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Credits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_did_you_hear_about_us__c</picklist>
+            <values>
+                <fullName>Facebook%2FTwitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Internet Search</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Internal_Categories__c</picklist>
+            <values>
+                <fullName>Creating Good Jobs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cutting Poverty in Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promoting Economic Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strengthening Families</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Video_Submission</fullName>
+        <active>true</active>
+        <description>For stories submitted with link to Video</description>
+        <label>Video Submission</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Child Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing and Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jobs%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nutrition Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28Please Specify%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Credits</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_did_you_hear_about_us__c</picklist>
+            <values>
+                <fullName>Facebook%2FTwitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Internet Search</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Internal_Categories__c</picklist>
+            <values>
+                <fullName>Creating Good Jobs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cutting Poverty in Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promoting Economic Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strengthening Families</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Storyteller__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Submitter__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Posted__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Video__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Storyteller__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Submitter__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Posted__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Video__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Storyteller__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Submitter__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Category__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Posted__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Video__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Storyteller__c</searchFilterFields>
+        <searchFilterFields>Submitter__c</searchFilterFields>
+        <searchFilterFields>Category__c</searchFilterFields>
+        <searchFilterFields>Posted__c</searchFilterFields>
+        <searchFilterFields>Video__c</searchFilterFields>
+        <searchResultsAdditionalFields>Storyteller__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Submitter__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Posted__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Video__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>
